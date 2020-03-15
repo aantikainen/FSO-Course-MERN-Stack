@@ -1,0 +1,22 @@
+Uusi muistiinpano sivulla https://fullstack-exampleapp.herokuapp.com/notes
+
+selain->palvelin: HTTP POST https://fullstack-exampleapp.herokuapp.com/new_note code 302 Found
+(  Clientin selain lähettää POST pyynnön ohjelmalle/palvelimelle jossa viesti annetaan parametrinä  )
+
+palvelin->palvelin: HTTP GET redirect /notes code 200 OK
+(  Metodi redirectaa toiselle metodille joka palauttaa HTML-sivun  )
+
+palvelin->selain: notes document, HTML-koodi
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css code 200 OK
+
+palvelin->selain: main.css
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.js code 200 OK
+
+palvelin->selain: main.js
+
+selain->palvelin HTTP GET data.json https://fullstack-exampleapp.herokuapp.com/data.json code 200 OK
+
+palvelin->selain: .json code
+(  Palvelimen metodi palauttaa selaimelle json:in muotoiltuna )

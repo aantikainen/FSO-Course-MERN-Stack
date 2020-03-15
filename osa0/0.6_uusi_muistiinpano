@@ -1,0 +1,23 @@
+Uusi muistiinpano sivulla https://fullstack-exampleapp.herokuapp.com/spa
+
+selain->palvelin GET https://fullstack-exampleapp.herokuapp.com/spa status 200 OK
+
+palvelin->selain HTML document sivu
+
+selain-> HTML lukeminen
+
+HTML->main.css->palvelin GET https://fullstack-exampleapp.herokuapp.com/main.css status 200 OK
+
+palvelin->selain main.css muotoilu
+
+HTML->spa.js->palvelin GET https://fullstack-exampleapp.herokuapp.com/spa.js status 200 OK
+
+spa.js takaisin selaimelle
+
+selain->data.json->palvelin GET https://fullstack-exampleapp.herokuapp.com/data.json
+
+palvelin palauttaa data.json koodin
+
+Formissa Save-> POST ->selaimelta->palvelin https://fullstack-exampleapp.herokuapp.com/new_note_spa status 201 Created
+
+palvelin palauttaa uuden näkymän.

@@ -1,0 +1,22 @@
+https://fullstack-exampleapp.herokuapp.com/spa sivun avaaminen
+
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa code 200 OK
+(  Metodi renderöi ruudulle HTML-sivua kunnes tapaa css-koodin )
+
+palvelin->selain: notes document, HTML-koodi
+(  Metodi renderöi ruudulle HTML-sivua kunnes tapaa css-koodin )
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/main.css code 200 OK
+
+palvelin->selain: main.css
+(  Jatkuu kunnes HTML-koodissa törmätään uuteen koodiin, seuraavaksi spa.js)
+
+selain->palvelin: HTTP GET https://fullstack-exampleapp.herokuapp.com/spa.js code 200 OK
+
+palvelin->selain: spa.js
+
+selain->palvelin HTTP GET data.json https://fullstack-exampleapp.herokuapp.com/data.json code 200 OK
+
+palvelin->selain: .json code
+(  Palvelimen metodi palauttaa selaimelle json:in muotoiltuna )
