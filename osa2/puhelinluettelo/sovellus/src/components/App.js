@@ -1,8 +1,10 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect} from 'react'
+import axios from 'axios'
 import FilteringFunction from './FilteringFunction'
 import Header from './Header'
 import ShowPersons from './ShowPersons'
 import AddPersonForm from './AddPersonForm'
+
 
 const App = () => {
     const [newName, setNewName] = useState('')
@@ -18,6 +20,15 @@ const App = () => {
             number: '040-4124571'
         }
     ])
+
+    useEffect(() => {
+        axios
+          .get('http://localhost:3001/persons')
+          .then(response => {
+            console.log('promise fulfilled')
+            setPersons(response.data)
+          })
+      }, [])
 
     const addPerson = (event) => {
         event.preventDefault()
