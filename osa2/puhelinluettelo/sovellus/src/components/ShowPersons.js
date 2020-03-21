@@ -1,15 +1,17 @@
 import React from 'react'
 
 const ShowPersons = (props) => {
-    const persons = props.personslist
-    const filter = props.filter
-    const res = persons.filter(p => p.name.toLowerCase().includes(filter.toLowerCase()))
-
+    let showables = props.persons
+    if (props.filter) {
+         showables = showables.filter(p => p.name.toLowerCase().includes(props.filter.toLowerCase()))
+    }
     return (
         <div>
-            {res.map((person, i) =>
-                <p key={i} value={person.name} > {person.name} {person.number} <button name={person.name} onClick={props.removePerson}>delete</button></p>
-            )}
+            <ul>
+        {showables.map((person) =>
+          <li key={person.name} > {person.name} {person.number}</li> 
+        )}
+      </ul>
         </div>
     )
 }
