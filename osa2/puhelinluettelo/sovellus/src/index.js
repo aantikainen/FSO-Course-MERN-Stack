@@ -4,7 +4,7 @@ import './index.css';
 import App from './components/App';
 import axios from 'axios'
 
-const promise = axios.get('http://localhost:3001/api/persons')
+const promise = axios.get('/api/persons')
 
 promise.then(response => {
   console.log(response)
