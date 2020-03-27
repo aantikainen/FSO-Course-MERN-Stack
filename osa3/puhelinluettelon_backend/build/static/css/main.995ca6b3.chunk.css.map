@@ -1,0 +1,1 @@
+{"version":3,"sources":["index.css"],"names":[],"mappings":"AAAA,GACE,WAAW,CACX,iBACF,CAEA,GACE,UAAW,CACX,eAAgB,CAChB,cACF","file":"main.995ca6b3.chunk.css","sourcesContent":["h1 {\n  color:green;\n  font-style: italic\n}\n\nli {\n  color: grey;\n  padding-top: 3px;\n  font-size: 15px;\n}"]}
