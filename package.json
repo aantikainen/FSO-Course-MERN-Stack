@@ -1,0 +1,30 @@
+{
+  "name": "puhelinluettelon_backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build:ui": "cd osa3/puhelinluettelon_backend/ &&rm -rf build && cd ../../osa2/puhelinluettelo/sovellus && npm run build --prod && cp -r build ../../../osa3/puhelinluettelon_backend/",
+    "deploy": "cd osa3/puhelinluettelon_backend/ && git push heroku master",
+    "deploy:full": "cd osa3/puhelinluettelon_backend/ && npm run build:ui && git add . && git commit -m uibuild && git push && npm run deploy",
+    "logs:prod": "cd osa3/puhelinluettelon_backend/ && heroku logs --tail",
+    "start": "cd osa3/puhelinluettelon_backend/ && node index.js",
+    "dev": "cd osa3/puhelinluettelon_backend/ && nodemon index.js",
+    "test": "cd osa3/puhelinluettelon_backend/ && echo \"Error: no test specified\" && exit 1",
+    "lint": "cd osa3/puhelinluettelon_backend/ && eslint ."
+  },
+  "author": "Arttu Antikainen",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.9.6",
+    "mongoose-unique-validator": "^2.0.3",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "eslint": "^6.8.0",
+    "nodemon": "^2.0.2"
+  }
+}
