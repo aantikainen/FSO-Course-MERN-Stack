@@ -1,0 +1,3 @@
+[submodule "osa3/puhelinluettelon_backend"]
+	path = osa3/puhelinluettelon_backend
+	url = https://github.com/aantikainen/palautusrepositorio.git
