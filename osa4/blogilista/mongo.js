@@ -1,4 +1,5 @@
 const mongoose = require('mongoose')
+mongoose.set('useFindAndModify', false)
 
 if (process.argv.length < 3) {
   console.log('give password as argument')
@@ -11,7 +12,7 @@ const password = process.argv[2]
 const url =
     `mongodb+srv://arttu:${password}@cluster0-o4ddg.mongodb.net/blogilista-app?retryWrites=true&w=majority`
 
-mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true })
+mongoose.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false })
 
 const blogSchema = new mongoose.Schema({
   title: {

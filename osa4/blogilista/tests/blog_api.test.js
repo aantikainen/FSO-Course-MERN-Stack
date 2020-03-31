@@ -73,11 +73,15 @@ describe('testing super', () => {
 
   test('adding a blog, step5', async () => {
 
-    await api
+    const response = await api
       .post('/api/blogs')
       .send({ author: 'test', likes: 1 })
       .expect(400)
       .expect('Content-Type', /application\/json/)
+
+    expect(response.body.error).toContain('`title` is required')
+    expect(response.body.error).toContain('`url` is required')
+
 
   })
 
