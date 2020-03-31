@@ -1,0 +1,1 @@
+CMD SHIFT L     - SELECT ALL

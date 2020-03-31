@@ -31,16 +31,11 @@ const blogSchema = new mongoose.Schema({
 
 const Blog = mongoose.model('Blog', blogSchema)
 
-const blog = new Blog({
-  title: 'Hello Blog',
-  author: 'aantikainen',
-  url: '@GitHub',
-  likes: 99
-})
-
-// blog.save().then(response => {
-//   console.log('blog saved!')
-//   mongoose.connection.close()
+// const blog = new Blog({
+//   title: 'Hello Blog',
+//   author: 'aantikainen',
+//   url: '@GitHub',
+//   likes: 99
 // })
 
 Blog.find({}).then(result => {
